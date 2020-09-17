@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/home/cx/TensorRT/include/**",
+                "/usr/local/**",
+                "/usr/local/cuda/include/**",
+                "/usr/local/include/**",
+               " /home/cx/TensorRT/include/**"
+
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/g++",
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}

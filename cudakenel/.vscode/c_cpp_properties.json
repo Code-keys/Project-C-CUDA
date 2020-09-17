@@ -1,0 +1,26 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/home/cx/TensorRT/**",
+                "/home/cx/TensorRT/include/common/**",
+                "/home/cx/libtorch/include/**",
+                "/home/cx/libtorch/**",
+                "/usr/local/**"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/local/cuda/bin/nvcc",
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "intelliSenseMode": "gcc-x64",
+            "compilerArgs": [
+                "-O3",
+                "-G",
+                "-g"
+            ]
+        }
+    ],
+    "version": 4
+}

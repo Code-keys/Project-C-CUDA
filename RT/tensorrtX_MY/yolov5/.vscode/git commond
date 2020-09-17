@@ -1,0 +1,66 @@
+直接    
+
+git add ./ 
+
+git commit " 信息"
+
+git pull 
+
+git push 
+
+
+
+
+1、git clone 仓库地址 //克隆仓库代码到本地
+
+2、git diff //查看本地代码与远程代码有哪些不同
+
+3、git pull //从远程拿到最新版本代码（提交代码时，忌讳直接提交。每次提交代码之前，一定要保证本地的代码是最新的，即先执行git pull）
+
+4、git branch //查看本地代码属于仓库的哪个分支
+
+5、git branch -a //查看仓库都有哪些分支
+
+6、git checkout 分支名 //切换分支（注：不建议使用，最好给一个分支单独建立一个文件夹）
+
+7、git clone -b 分支名 仓库地址 //克隆指定分支的仓库代码到本地
+
+8、git push -u origin 分支名（分支名通常为master）
+
+1、git stash //将本地文件回馈上一步操作
+
+2、git pull //将新代码下载下来
+
+git stash pop //会将已经冲突的文件合并
+
+使用git的初始化命令
+git init
+
+你的github中创建一个新的仓库
+
+2）、配置git：
+
+（1）输入命令：git config --global user.name "你的用户名"
+
+（2）输入命令：git config --global user.email 你的邮箱地址
+
+3）、添加托管文件：
+
+输入命令：git add ./    只是添加某个文件，就将文件名字列出，如果添加目录，则可以用*代替
+
+git status
+
+commit推送:      git commit -m "Update Readme Files(Version of Chinese & English)"
+
+构建仓库结束后，我们需要得到该仓库的SSH Key才能向其中上传内容。
+git remote add origin git@github.com:Codes_key/你的仓库name.git
+
+git remote set-url origin git@github.com:bowrian/vgg-tensorflow.git
+
+git push origin master   
+git push
+
+ 强行上传  ：git push -u origin +master
+
+
+这个命令只用输一次，以后就不用再输入了，直接    git add，git commit，git pull，git push。

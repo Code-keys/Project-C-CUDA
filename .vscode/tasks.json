@@ -1,0 +1,49 @@
+{
+	// 有关 tasks.json 格式的文档，请参见
+		// https://go.microsoft.com/fwlink/?LinkId=733558
+		"version": "2.0.0",
+		"tasks": [
+			{
+						"label": "build_cuda",
+						"type": "shell",
+						"command": "nvcc",
+						"args":["-arch", "sm_60" ,"-g","${file}","-o","${file}.out",
+
+							// include 头文件
+							"-I", "/usr/local/cuda/include",
+							"-I", "/usr/local/cuda/samples/common/inc",
+							"-I", "/usr/local/cuda/include",
+							
+							// lib 库文件地址
+							"-L", "/usr/local/cuda/lib64",   
+							"-L", "/usr/local/cuda/samples/common/lib",  
+							"-l", "cudart",                           
+							"-l", "cublas",
+							"-l", "cudnn",
+							"-l", "curand",
+							"-D_MWAITXINTRIN_H_INCLUDED"  
+						],
+						"group": {
+							"isDefault": true,
+							"kind": "build"
+						},
+			},
+			{
+						"type": "shell",
+						"label": "build",
+						"command": "cmake",
+						"args": [".","&&",
+						//	"make clean",
+						//	"&&",
+							"make"
+						],
+						"options": {
+							"cwd": "${workspaceFolder}/cudakernel/"
+						},
+						"problemMatcher": [
+							"$gcc"
+						],
+			}
+		]
+	}
+	
